@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Modal Login</title>
+</head>
+    <link rel="stylesheet" href="modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<body>
+<div class="container">
+    <canvas id="weightChart"></canvas>
+</div>
+
+</body>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // ข้อมูลน้ำหนักและช่วงเวลา
+    const weightData = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+            label: 'Weight (kg)',
+            data: [60, 61, 62, 63, 64, 65],
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            fill: 'start'
+        }]
+    };
+
+    // ตั้งค่ากราฟ
+    const config = {
+        type: 'line', // ประเภทกราฟ
+        data: weightData, // ข้อมูล
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true // ให้แกน y เริ่มต้นที่ 0
+                }
+            }
+        }
+    };
+
+    // สร้างกราฟใน canvas
+    const weightChart = new Chart(document.getElementById('weightChart'), config);
+</script>
+</html>

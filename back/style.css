@@ -1,0 +1,110 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center; /* Align the h1 element to the right */
+    margin-left: 200px; /* Add some right margin for spacing */
+}
+
+form, table {
+    margin: 20px auto;
+    width: 80%;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Actions section styles */
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-button, .delete-button {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+    padding-right: 10px; /* Add right padding to the left sidebar */
+}
+
+.sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white; /* Text color of the tabs */
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #555; /* Background color on hover for tabs */
+}
+
+/* Content section styles */
+.content {
+    margin-left: 250px; /* Left margin of the main content */
+    padding: 20px; /* Inner padding of the main content */
+}
+
+/* Prevent text from wrapping in tables */
+th, td {
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+}
+
+/* Adjust table width and margin to accommodate the sidebar */
+table {
+    border-collapse: collapse;
+    width: calc(100% - 260px); /* Subtract the width of the left sidebar */
+    margin-left: 260px; /* Set the left margin of the table equal to the sidebar width */
+}
